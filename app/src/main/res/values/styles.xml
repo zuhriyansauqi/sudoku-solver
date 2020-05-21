@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/dark_gray_blue</item>
+        <item name="colorPrimaryVariant">@color/japanese_indigo</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/japanese_indigo</item>
+    </style>
+
+    <style name="ButtonBase">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">0dp</item>
+    </style>
+
+    <style name="ButtonGreen" parent="ButtonBase">
+        <item name="android:backgroundTint">@color/algae</item>
+    </style>
+
+    <style name="ButtonDarkOrange" parent="ButtonBase">
+        <item name="android:backgroundTint">@color/dusty_orange</item>
+    </style>
+
+    <style name="ButtonLightOrange" parent="ButtonBase">
+        <item name="android:backgroundTint">@color/persian_orange</item>
+    </style>
+
+    <style name="ButtonInput">
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Button</item>
+        <item name="android:textColor">@color/dark_gray_blue</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+</resources>

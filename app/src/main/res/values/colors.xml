@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="japanese_indigo">#273d49</color>
+    <color name="dark_gray_blue">#324d5c</color>
+    <color name="deep_space_sparkle">#3b5767</color>
+    <color name="dusty_orange">#e37b40</color>
+    <color name="persian_orange">#e78f5e</color>
+    <color name="algae">#54b273</color>
+    <color name="white">#ffffff</color>
+</resources>
