@@ -4,6 +4,22 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'jacoco-android'
+
+jacoco {
+    toolVersion = "0.8.5"
+}
+
+tasks.withType(Test) {
+    jacoco.includeNoLocationClasses = true
+}
+
+jacocoAndroidUnitTestReport {
+    csv.enabled true
+    html.enabled true
+    xml.enabled true
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"

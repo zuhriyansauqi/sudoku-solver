@@ -2,7 +2,10 @@ package com.zuhriyansauqi.sudoku.view.custom
 
 import android.content.Context
 import android.content.res.Resources
-import android.graphics.*
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.Rect
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
@@ -74,10 +77,16 @@ class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(conte
         return when (event.action) {
             MotionEvent.ACTION_DOWN -> {
                 handleTouchEvent(event.x, event.y)
+                performClick()
                 true
             }
             else -> false
         }
+    }
+
+    override fun performClick(): Boolean {
+        super.performClick()
+        return true
     }
 
     private fun fillCells(canvas: Canvas) {
