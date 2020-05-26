@@ -1,6 +1,8 @@
 package com.zuhriyansauqi.sudoku.game
 
-class Board(val size: Int, var cells: List<Cell>) {
+import kotlin.math.sqrt
+
+class Board(private val size: Int, var cells: List<Cell>) {
     fun getCell(row: Int, col: Int) = cells[row * size + col]
 
     fun resetCells() {
@@ -42,7 +44,7 @@ class Board(val size: Int, var cells: List<Cell>) {
 
     private fun subSectionConstraint(row: Int, col: Int): Boolean {
         val constraint = BooleanArray(size)
-        val subSectionSize = Math.sqrt(size.toDouble()).toInt()
+        val subSectionSize = sqrt(size.toDouble()).toInt()
 
         val subSectionRowStart = row / subSectionSize * subSectionSize
         val subSectionRowEnd = subSectionRowStart + subSectionSize
@@ -61,7 +63,7 @@ class Board(val size: Int, var cells: List<Cell>) {
     private fun checkConstraint(row: Int, constraint: BooleanArray, col: Int): Boolean {
         if (getCell(row, col).value != 0) {
             if (!constraint[getCell(row, col).value - 1]) {
-                constraint[getCell(row, col).value - 1] = true;
+                constraint[getCell(row, col).value - 1] = true
             } else {
                 return false
             }

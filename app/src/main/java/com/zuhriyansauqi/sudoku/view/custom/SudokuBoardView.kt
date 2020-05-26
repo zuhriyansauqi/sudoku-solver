@@ -12,6 +12,7 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import com.zuhriyansauqi.sudoku.R
 import com.zuhriyansauqi.sudoku.game.Cell
+import kotlin.math.min
 
 class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(context, attributeSet) {
 
@@ -62,7 +63,7 @@ class SudokuBoardView(context: Context, attributeSet: AttributeSet) : View(conte
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-        val sizePixels = Math.min(widthMeasureSpec, heightMeasureSpec)
+        val sizePixels = min(widthMeasureSpec, heightMeasureSpec)
         setMeasuredDimension(sizePixels, sizePixels)
     }
 
